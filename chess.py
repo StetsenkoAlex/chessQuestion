@@ -96,7 +96,17 @@ def place_pieces_with_combinations(n:int, existing_pieces:list,combinations:list
     solutions = []
     initial_pieces = set(existing_pieces)
 
-    def backtrack(remaining_combination, pieces):
+    def backtrack(remaining_combination:list, pieces:list) -> None:
+        """
+        Рекурсивная функция для расположения всех фигур в безопастные позиции
+        
+        :param 
+        remaining_combination(list): Оставшиеся фигуры для расположения на поле
+        pieces(list): Список координат всех существующих фигур с названием фигуры
+
+        :return 
+        (None)
+        """
         if not remaining_combination:
             solutions.append(sorted(pieces))
             return
