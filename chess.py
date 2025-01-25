@@ -80,7 +80,7 @@ def is_safe(x:int, y:int, piece_type:str, placed_pieces:list, n:int) -> bool:
             return False
     return 0 <= x < n and 0 <= y < n
 
-def place_pieces_with_combinations(n:int, existing_pieces:list,combinations:list):
+def place_pieces_with_combinations(n:int, existing_pieces:list,combinations:list) -> list:
     """
     Поиск всех возможных расстановок дополнительных фигур.
     
